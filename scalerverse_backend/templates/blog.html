@@ -1,0 +1,117 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Insights & News | ScalerVerse Ltd</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <link rel="stylesheet" href="{% static 'style.css' %}">
+</head>
+
+<body>
+    <nav class="navbar">
+        <div class="container nav-container">
+            <div class="logo-container">
+                <a href="{% url 'home' %}" class="logo-link">
+                    <img src="{% static 'assets/logo_removed-bg.png' %}" alt="ScalerVerse Logo" class="nav-logo">
+                </a>
+                <div class="logo-text">ScalerVerse<span class="highlight">.</span></div>
+            </div>
+
+            <ul class="nav-links">
+                <li><a href="{% url 'home' %}" class="nav-link">Home</a></li>
+                
+                <li><a href="{% url 'home' %}#about" class="nav-link">About</a></li>
+                
+                <li><a href="{% url 'team' %}" class="nav-link">Team</a></li>
+                
+                <li><a href="{% url 'blog' %}" class="nav-link">Blog</a></li>
+                
+                <li><a href="{% url 'home' %}#projects" class="nav-link">Projects</a></li>
+                <li><a href="{% url 'home' %}#contact" class="btn-primary">Contact Us</a></li>
+            </ul>
+
+            <button class="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </button>
+        </div>
+    </nav>
+
+    <section class="page-header">
+        <div class="container text-center">
+            <span class="badge">Knowledge Hub</span>
+            <h1 class="fade-in">Our Latest <span class="gradient-text">Insights</span></h1>
+            <p class="fade-in delay-1">Tech trends, startup stories, and coding tutorials from the ScalerVerse team.</p>
+        </div>
+        <div class="glow-effect top-right"></div>
+    </section>
+
+    <section class="blog-section">
+        <div class="container">
+            <div class="blog-grid">
+                
+                {% for post in posts %}
+                <article class="blog-card reveal">
+                    <div class="blog-img-box">
+    {% if post.image %}
+        <img src="{{ post.image.url }}" alt="{{ post.title }}" style="width: 100%; height: 100%; object-fit: cover;">
+    {% else %}
+        <div class="blog-placeholder gradient-1">
+            <i class="fas fa-newspaper"></i>
+        </div>
+    {% endif %}
+</div>
+                    <div class="blog-content">
+                        <div class="blog-meta">
+                            <span class="date"><i class="far fa-calendar-alt"></i> {{ post.date_posted|date:"M d, Y" }}</span>
+                            <span class="tag">Update</span>
+                        </div>
+                        <h3>{{ post.title }}</h3>
+                        <p>{{ post.content|truncatewords:20 }}</p>
+                        <a href="{% url 'blog_detail' pk=post.pk %}"" class="read-more">Read Article <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </article>
+                {% empty %}
+                    <div style="grid-column: 1 / -1; text-align: center; padding: 80px 0;">
+                        <i class="fas fa-pen-fancy" style="font-size: 3rem; color: #94a3b8; margin-bottom: 20px;"></i>
+                        <h3 style="color: #f8fafc; font-size: 1.5rem;">No posts yet!</h3>
+                        <p style="color: #94a3b8;">Check back later for updates.</p>
+                    </div>
+                {% endfor %}
+                </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container footer-content">
+            <div class="footer-top">
+                <div class="footer-brand">
+                    <img src="{% static 'assets/logo_removed-bg.png' %}" alt="ScalerVerse Logo" class="footer-logo">
+                    <p>We convert your story into reality.</p>
+                </div>
+                <div class="footer-nav">
+                    <a href="index.html">Home</a>
+                    <a href="team.html">Team</a>
+                    <a href="{% url 'blog' %}">Blog</a>
+                    <a href="index.html#contact">Contact</a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 ScalerVerse Ltd. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="{% static 'main.js' %}"></script>
+</body>
+</html>

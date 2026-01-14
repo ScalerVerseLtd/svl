@@ -1,0 +1,148 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Team | ScalerVerse Ltd</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <link rel="stylesheet" href="{% static 'style.css' %}">
+</head>
+
+<body>
+    <nav class="navbar">
+        <div class="container nav-container">
+            <div class="logo-container">
+                <a href="{% url 'home' %}" class="logo-link">
+                    <img src="{% static 'assets/logo_removed-bg.png' %}" alt="ScalerVerse Logo" class="nav-logo">
+                </a>
+                <div class="logo-text">ScalerVerse<span class="highlight">.</span></div>
+            </div>
+
+            <ul class="nav-links">
+                <li><a href="{% url 'home' %}" class="nav-link">Home</a></li>
+                <li><a href="{% url 'home' %}#about" class="nav-link">About</a></li>
+                <li><a href="{% url 'team' %}" class="nav-link active">Team</a></li>
+                <li><a href="{% url 'blog' %}" class="nav-link">Blog</a></li>
+                <li><a href="{% url 'home' %}#projects" class="nav-link">Projects</a></li>
+                <li><a href="{% url 'home' %}#contact" class="btn-primary">Contact Us</a></li>
+            </ul>
+
+            <button class="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </button>
+        </div>
+    </nav>
+
+    <section class="page-header">
+        <div class="container text-center">
+            <span class="badge">The Masterminds</span>
+            <h1 class="fade-in">Meet The <span class="gradient-text">ScalerVerse Team</span></h1>
+            <p class="fade-in delay-1">A group of passionate innovators turning stories into digital reality.</p>
+        </div>
+        <div class="glow-effect top-right"></div>
+    </section>
+
+    <section class="team-section">
+        <div class="container">
+            <div class="section-header">
+                <h2>Founders</h2>
+                <p>Guiding the vision and execution.</p>
+            </div>
+
+            <div class="leaders-grid">
+                <div class="team-card reveal">
+                    <div class="member-img-box">
+                        <img src="{% static 'assets/co-founders/sagar.jpg' %}" alt="Md Shafiul Alam Sagar" class="member-img">
+                        <div class="social-overlay">
+                            <a href="https://www.facebook.com/md.shafiul.sagar/" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                            <a href="https://wa.me/8801569124294" target="_blank"><i class="fab fa-whatsapp"></i></a>
+                        </div>
+                    </div>
+                    <div class="member-info">
+                        <h3>Md Shafiul Alam Sagar</h3>
+                        <span class="role">Co-Founder & CEO</span>
+                        <p>Visionary leader passionate about Backend, Flutter, startups, and building scalable tech ecosystems.</p>
+                    </div>
+                </div>
+
+                <div class="team-card reveal">
+                    <div class="member-img-box">
+                        <img src="{% static 'assets/co-founders/masud.jpg' %}" alt="Masud Rana Emon" class="member-img">
+                        <div class="social-overlay">
+                            <a href="https://www.facebook.com/masudrana.emon.393" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                            <a href="https://wa.me/8801609248841" target="_blank"><i class="fab fa-whatsapp"></i></a>
+                        </div>
+                    </div>
+                    <div class="member-info">
+                        <h3>Masud Rana Emon</h3>
+                        <span class="role">Co-Founder & CPO</span>
+                        <p>Product strategist ensuring every solution meets market demands and user needs.</p>
+                    </div>
+                </div>
+
+                <div class="team-card reveal">
+                    <div class="member-img-box">
+                        <img src="{% static 'assets/co-founders/ahonaf.jpg' %}" alt="Ahonaf Redowan Hasib" class="member-img">
+                        <div class="social-overlay">
+                            <a href="https://www.facebook.com/ahonaf.redowan.hasib.003" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                            <a href="https://wa.me/8801641997832" target="_blank"><i class="fab fa-whatsapp"></i></a>
+                        </div>
+                    </div>
+                    <div class="member-info">
+                        <h3>Ahonaf Redowan Hasib</h3>
+                        <span class="role">Co-Founder & Engineering Head</span>
+                        <p>Leading the technical architecture and ensuring code quality across all platforms.</p>
+                    </div>
+                </div>
+
+                <div class="team-card reveal">
+                    <div class="member-img-box">
+                        <img src="{% static 'assets/co-founders/emon.jpg' %}" alt="Emon Ahmed Noyon" class="member-img">
+                        <div class="social-overlay">
+                            <a href="https://www.facebook.com/emon.ahmed.noyon.2025" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                            <a href="https://wa.me/8801610681800" target="_blank"><i class="fab fa-whatsapp"></i></a>
+                        </div>
+                    </div>
+                    <div class="member-info">
+                        <h3>Emon Ahmed Noyon</h3>
+                        <span class="role">Co-Founder & Community Manager</span>
+                        <p>Building strong relationships with clients and managing the ScalerVerse community.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container footer-content">
+            <div class="footer-top">
+                <div class="footer-brand">
+                    <img src="{% static 'assets/logo_removed-bg.png' %}" alt="ScalerVerse Logo" class="footer-logo">
+                    <p>We convert your story into reality.</p>
+                </div>
+                <div class="footer-nav">
+                    <a href="{% url 'home' %}">Home</a>
+                    <a href="{% url 'team' %}">Team</a>
+                    <a href="{% url 'blog' %}">Blog</a>
+                    <a href="{% url 'home' %}#contact">Contact</a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 ScalerVerse Ltd. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="{% static 'main.js' %}"></script>
+</body>
+</html>
