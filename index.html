@@ -5,26 +5,28 @@
     <meta name="google-site-verification" content="8jqddc6foWPMt5c2HZVhnJwSlGboReeHhjDGeeKa_Yw" />
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ScalerVerse Ltd</title>
+    <title>ScalerVerse Ltd | Digital Solutions</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
-    <div class="container">
-        <nav>
+    <nav class="navbar">
+        <div class="container nav-container">
             <div class="logo-container">
-                <div class="logo-img-container">
-                    <!-- <img src="ScalerVerse Ltd.png" alt="ScalerVerse Ltd Logo" class="logo-img"> -->
-                </div>
-                <div class="logo-text">ScalerVerse Ltd</div>
+                <div class="logo-text">ScalerVerse<span class="highlight">.</span></div>
             </div>
 
             <ul class="nav-links">
-                <li><a href="#home"><i class="fas fa-home"></i> Home</a></li>
-                <li><a href="#about"><i class="fas fa-users"></i> About Us</a></li>
-                <li><a href="#projects"><i class="fas fa-project-diagram"></i> Projects</a></li>
-                <li><a href="#contact"><i class="fas fa-envelope"></i> Contact Us</a></li>
+                <li><a href="#home" class="nav-link">Home</a></li>
+                <li><a href="#about" class="nav-link">About</a></li>
+                <li><a href="#projects" class="nav-link">Projects</a></li>
+                <li><a href="#contact" class="btn-primary">Contact Us</a></li>
             </ul>
 
             <button class="hamburger">
@@ -32,283 +34,242 @@
                 <span class="bar"></span>
                 <span class="bar"></span>
             </button>
-        </nav>
+        </div>
+    </nav>
 
-        <!-- Home Section -->
-        <section id="home">
-            <h1>Welcome to ScalerVerse Ltd</h1>
-            <p>ScalerVerse Ltd is a digital solutions provider specializing in Web Development, App Development, CV
-                Writing, and Graphic Design. We offer custom services tailored to your needs.</p>
-            <a href="#projects" class="btn">Explore Our Solutions</a>
+    <section id="home" class="hero-section">
+        <div class="container hero-content">
+            <span class="badge">Innovate • Build • Scale</span>
+            <h1 class="fade-in">We Build Digital <br><span class="gradient-text">Experiences That Matter</span></h1>
+            <p class="fade-in delay-1">ScalerVerse Ltd empowers startups and businesses with cutting-edge Web Development, App Solutions, and Creative Design. Let's turn your vision into reality.</p>
+            <div class="hero-buttons fade-in delay-2">
+                <a href="#projects" class="btn-primary">View Our Work</a>
+                <a href="#contact" class="btn-secondary">Get a Quote</a>
+            </div>
+        </div>
+        
+        <div class="glow-effect top-right"></div>
+        <div class="glow-effect bottom-left"></div>
+    </section>
 
-            <div class="products">
-                <div class="product-card">
-                    <div class="product-icon">
-                        <i class="fas fa-laptop-code"></i>
+    <section class="services-section">
+        <div class="container">
+            <div class="section-header">
+                <h2>Our Expertise</h2>
+                <p>High-performance solutions tailored for your growth.</p>
+            </div>
+
+            <div class="products-grid">
+                <div class="product-card reveal">
+                    <div class="card-icon">
+                        <i class="fas fa-code"></i>
                     </div>
-                    <div class="product-content">
-                        <h3>Web Design</h3>
-                        <p>Professional websites built for students, startups, and small businesses. Clean, responsive,
-                            and tailored to your brand.</p>
-                        <button class="btn whatsapp-order">Order Now</button>
-                    </div>
+                    <h3>Web Development</h3>
+                    <p>Blazing fast, SEO-optimized websites built with modern frameworks tailored to your brand.</p>
+                    <button class="text-btn whatsapp-order">Start Project <i class="fas fa-arrow-right"></i></button>
                 </div>
 
-                <div class="product-card">
-                    <div class="product-icon">
-                        <i class="fas fa-paint-brush"></i>
+                <div class="product-card reveal">
+                    <div class="card-icon">
+                        <i class="fas fa-mobile-screen"></i>
                     </div>
-                    <div class="product-content">
-                        <h3>Graphic Design</h3>
-                        <p>Professional branding and visual solutions for your products and services.</p>
-                        <button class="btn whatsapp-order">Order Now</button>
-                    </div>
+                    <h3>App Development</h3>
+                    <p>Native and Cross-platform mobile applications that provide seamless user experiences.</p>
+                    <button class="text-btn whatsapp-order">Start Project <i class="fas fa-arrow-right"></i></button>
                 </div>
 
-                <div class="product-card">
-                    <div class="product-icon">
-                        <i class="fas fa-mobile-alt"></i>
+                <div class="product-card reveal">
+                    <div class="card-icon">
+                        <i class="fas fa-pen-nib"></i>
                     </div>
-                    <div class="product-content">
-                        <h3>App Development</h3>
-                        <p>Custom mobile apps for startups, students, and small businesses. Fast, user-friendly, and
-                            built to match your exact needs.</p>
-                        <button class="btn whatsapp-order">Order Now</button>
-                    </div>
+                    <h3>Graphic Design</h3>
+                    <p>Visual storytelling through logos, branding, and UI/UX design that captures attention.</p>
+                    <button class="text-btn whatsapp-order">Start Project <i class="fas fa-arrow-right"></i></button>
                 </div>
 
-                <div class="product-card">
-                    <div class="product-icon">
-                        <i class="fa-solid fa-file"></i>
+                <div class="product-card reveal">
+                    <div class="card-icon">
+                        <i class="fas fa-file-contract"></i>
                     </div>
-                    <div class="product-content">
-                        <h3>CV/Resume</h3>
-                        <p>Professional and personalized ATS friendly CVs and resumes tailored to highlight your skills
-                            and experience. Crafted to help you stand out and land your dream job.</p>
-                        <button class="btn whatsapp-order">Order Now</button>
+                    <h3>Professional CV</h3>
+                    <p>ATS-friendly resumes and CVs crafted to highlight your potential and land your dream job.</p>
+                    <button class="text-btn whatsapp-order">Start Project <i class="fas fa-arrow-right"></i></button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="about" class="about-section">
+        <div class="container about-wrapper">
+            <div class="about-content reveal-left">
+                <div class="section-label">Who We Are</div>
+                <h2>Bridging the Gap Between <br><span class="highlight-text">Ideas & Execution</span></h2>
+                <p>At ScalerVerse Ltd, we don't just write code; we build businesses. Our mission is to democratize technology for students, startups, and SMEs.</p>
+                
+                <div class="stats-grid">
+                    <div class="stat-item">
+                        <div class="stat-number">3+</div>
+                        <div class="stat-label">Years Exp</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number">50+</div>
+                        <div class="stat-label">Projects</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number">100%</div>
+                        <div class="stat-label">Satisfaction</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="about-features reveal-right">
+                <div class="feature-row">
+                    <i class="fas fa-check-circle"></i>
+                    <div>
+                        <h4>Client-Centric</h4>
+                        <p>Your goals shape our solutions. We listen, adapt, and deliver.</p>
+                    </div>
+                </div>
+                <div class="feature-row">
+                    <i class="fas fa-check-circle"></i>
+                    <div>
+                        <h4>Future-Ready Tech</h4>
+                        <p>We use the latest tech stacks to ensure scalability.</p>
+                    </div>
+                </div>
+                <div class="feature-row">
+                    <i class="fas fa-check-circle"></i>
+                    <div>
+                        <h4>Affordable Quality</h4>
+                        <p>Premium digital services at startup-friendly prices.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="projects" class="projects-section">
+        <div class="container">
+            <div class="section-header center">
+                <h2>Featured Projects</h2>
+                <p>A glimpse into what we have built.</p>
+            </div>
+
+            <div class="category-tabs">
+                <button class="tab-btn active" data-category="all">All</button>
+                <button class="tab-btn" data-category="web">Web</button>
+                <button class="tab-btn" data-category="app">App</button>
+                <button class="tab-btn" data-category="graphic">Design</button>
+            </div>
+
+            <div class="projects-showcase">
+                <div class="project-box reveal" data-category="web">
+                    <div class="project-img"></div>
+                    <div class="project-info">
+                        <h4>E-Commerce Platform</h4>
+                        <span>Web Development</span>
+                    </div>
+                </div>
+                <div class="project-box reveal" data-category="app">
+                    <div class="project-img"></div>
+                    <div class="project-info">
+                        <h4>Fintech MVP</h4>
+                        <span>App Development</span>
+                    </div>
+                </div>
+                <div class="project-box reveal" data-category="graphic">
+                    <div class="project-img"></div>
+                    <div class="project-info">
+                        <h4>Brand Identity</h4>
+                        <span>Graphic Design</span>
+                    </div>
+                </div>
+                <div class="project-box reveal" data-category="web">
+                    <div class="project-img"></div>
+                    <div class="project-info">
+                        <h4>Portfolio Site</h4>
+                        <span>Web Design</span>
                     </div>
                 </div>
             </div>
-        </section>
+        </div>
+    </section>
 
-        <!-- About Us Section -->
-        <section id="about">
-            <div class="section-title">
-                <h2>About Us</h2>
-            </div>
-
-            <div class="about-content">
-                <div class="about-text">
-                    <h3>Our Mission</h3>
-                    <p>At ScalerVerse Ltd, our mission is to empower individuals, startups, and businesses by delivering
-                        customized, high-quality digital solutions. We aim to bridge the gap between ideas and execution
-                        through web and app development, CV writing, and graphic design services — all tailored to meet
-                        our clients' unique goals. We are committed to innovation, affordability, and long-term support
-                        to help our clients grow in a digital-first world.</p>
-
-                    <h3>Our Vision</h3>
-                    <p>To become a trusted global hub for digital innovation by providing accessible, customizable, and
-                        result-driven tech solutions. ScalerVerse Ltd envisions a future where every student, startup,
-                        and business—regardless of size or location—can unlock their full potential through smart
-                        digital transformation.</p>
-
-                    <h3>How We Work</h3>
-                    <p>At ScalerVerse Ltd, we believe in delivering personalized, efficient, and result-oriented
-                        services. Here's how we work with our <br><br>
-
-                        1. Consultation & Requirement Gathering<br>
-                        We start by understanding your vision, goals, and specific needs through direct
-                        communication—via call, message, or meeting.<br><br>
-
-                        2. Planning & Proposal<br>
-                        Based on your requirements, we create a customized plan or project proposal with a clear
-                        timeline and pricing.<br><br>
-
-                        3. Design & Development<br>
-                        Our team (currently led by the founder) begins crafting your solution—whether it's a website,
-                        app, CV, or graphic—focusing on quality, usability, and your feedback.<br><br>
-
-                        4. Review & Revisions<br>
-                        You review the initial work and share your thoughts. We revise and improve the project until it
-                        meets your satisfaction.<br><br>
-
-                        5. Delivery & Support<br>
-                        Once finalized, we deliver the project in your preferred format and offer post-delivery support
-                        to ensure everything runs smoothly.<br><br>
-
-                        6. Flexible. Friendly. Focused on You.<br>
-                        We work around your needs—whether you're a student, startup, or business—and ensure that every
-                        project reflects your goals.<br><br></p>
-
-                    <div class="about-features">
-                        <div class="feature">
-                            <i class="fas fa-lightbulb"></i>
-                            <h4>Innovative Approach</h4>
-                            <p>We stay ahead with the latest technologies to build modern, smart, and scalable digital
-                                products.</p>
-                        </div>
-
-                        <div class="feature">
-                            <i class="fas fa-leaf"></i>
-                            <h4>Client-Centered Approach</h4>
-                            <p>Your goals shape our solutions. We listen, adapt, and deliver exactly what you need —
-                                nothing generic.</p>
-                        </div>
-
-                        <div class="feature">
-                            <i class="fas fa-hands-helping"></i>
-                            <h4>Collaborative Process</h4>
-                            <p>We treat every project as a partnership, working closely with clients to ensure clarity,
-                                feedback, and satisfaction.</p>
-                        </div>
-
-                        <div class="feature">
-                            <i class="fas fa-chart-line"></i>
-                            <h4>Results-Driven</h4>
-                            <p>We measure our success by the impact our work creates — whether it's boosting visibility,
-                                saving time, or helping you grow.</p>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="about-image">
-                    <!-- <img src="ScalerVerse Ltd.png" alt="ScalerVerse Ltd Team"> -->
-                </div>
-            </div>
-        </section>
-
-        <!-- Projects Section -->
-        <section class="project-section" id="projects">
-            <h2>Project Categories</h2>
-            <div class="project-categories">
-                <div class="project-category" data-category="web">Web</div>
-                <div class="project-category" data-category="app">App</div>
-                <div class="project-category" data-category="graphic">Graphic</div>
-                <div class="project-category" data-category="cv">CV</div>
-            </div>
-
-            <div class="projects-list">
-                <!-- Example projects -->
-                <div class="project-item" data-category="web">Web Project 1</div>
-                <div class="project-item" data-category="web">Web Project 2</div>
-                <div class="project-item" data-category="app">App Project 1</div>
-                <div class="project-item" data-category="app">App Project 2</div>
-                <div class="project-item" data-category="graphic">Graphic Project 1</div>
-                <div class="project-item" data-category="cv">CV Project 1</div>
-            </div>
-        </section>
-
-        <!-- Contact Us Section -->
-        <section id="contact">
-            <div class="section-title">
-                <h2>Contact Us</h2>
-            </div>
-
-            <div class="contact-container">
-                <div class="contact-info">
-                    <div class="contact-item">
-                        <div class="contact-icon">
+    <section id="contact" class="contact-section">
+        <div class="container">
+            <div class="contact-wrapper">
+                <div class="contact-info reveal-left">
+                    <h2>Let's Build Something <br>Amazing Together</h2>
+                    <p>Have a project in mind? Reach out to us for a free consultation.</p>
+                    
+                    <div class="contact-details">
+                        <div class="c-item">
                             <i class="fas fa-map-marker-alt"></i>
+                            <span>Gazipur, Dhaka, Bangladesh</span>
                         </div>
-                        <div class="contact-text">
-                            <h3>Our Location</h3>
-                            <p>Rajendrapur Cantonment<br>Gazipur Sadar, Gazipur<br>1742<br>Bangladesh</p>
+                        <div class="c-item">
+                            <i class="fas fa-phone"></i>
+                            <span>+880 1569 124294</span>
                         </div>
-                    </div>
-
-                    <div class="contact-item">
-                        <div class="contact-icon">
-                            <i class="fas fa-phone-alt"></i>
-                        </div>
-                        <div class="contact-text">
-                            <h3>Phone Number</h3>
-                            <p>+8801569124294<br>+8801949059596</p>
-                        </div>
-                    </div>
-
-                    <div class="contact-item">
-                        <div class="contact-icon">
+                        <div class="c-item">
                             <i class="fas fa-envelope"></i>
-                        </div>
-                        <div class="contact-text">
-                            <h3>Email Address</h3>
-                            <p>
-                            <p>scalerverse@gmail.com</p><br>
-                            <br>
-                            </p>
+                            <span>scalerverse@gmail.com</span>
                         </div>
                     </div>
 
-                    <div class="contact-item">
-                        <div class="contact-icon">
-                            <i class="fas fa-share-alt"></i>
-                        </div>
-                        <div class="contact-text">
-                            <h3>Social Media</h3>
-                            <p>Connect with us on social platforms</p>
-                            <div class="social-links">
-                                <a href="https://www.facebook.com/profile.php?id=61584400093580"><i
-                                        class="fab fa-facebook-f"></i></a>
-                                <a href="#"><i class="fab fa-twitter"></i></a>
-                                <a href="#"><i class="fab fa-linkedin-in"></i></a>
-                                <a href="#"><i class="fab fa-instagram"></i></a>
-                            </div>
-                        </div>
+                    <div class="social-icons">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#"><i class="fab fa-github"></i></a>
                     </div>
                 </div>
 
-                <div class="contact-form">
+                <div class="contact-form-container reveal-right">
                     <form action="https://formsubmit.co/scalerverse@gmail.com" method="POST" id="contactForm">
-                        <input type="hidden" name="_subject" value="New Contact Message from Website">
+                        <input type="hidden" name="_subject" value="New Lead from ScalerVerse">
                         <input type="hidden" name="_captcha" value="false">
-                        <input type="hidden" name="_template" value="box">
-                        <div class="form-group">
-                            <input type="text" name="name" placeholder="Your Name" required>
+                        
+                        <div class="input-group">
+                            <input type="text" name="name" required placeholder=" ">
+                            <label>Your Name</label>
                         </div>
-                        <div class="form-group">
-                            <input type="email" name="email" placeholder="Your Email" required>
+                        <div class="input-group">
+                            <input type="email" name="email" required placeholder=" ">
+                            <label>Email Address</label>
                         </div>
-                        <div class="form-group">
-                            <input type="text" name="subject" placeholder="Subject">
+                        <div class="input-group">
+                            <textarea name="message" required placeholder=" "></textarea>
+                            <label>Tell us about your project</label>
                         </div>
-                        <div class="form-group">
-                            <textarea name="message" placeholder="Your Message" required></textarea>
-                        </div>
-                        <button type="submit" class="btn">Send Message</button>
+                        
+                        <button type="submit" class="btn-primary full-width">Send Message</button>
                     </form>
-                    <div id="toast" class="toast">
-                        Your message has been sent!
-                    </div>
+                    <div id="toast" class="toast">Message Sent Successfully!</div>
                 </div>
             </div>
-        </section>
+        </div>
+    </section>
 
-        <!-- Footer -->
-        <footer>
-            <div class="footer-content">
-                <div class="footer-logo">
-                    <div class="logo-img-container">
-                        <!-- <img src="ScalerVerse Ltd.png" alt="ScalerVerse Ltd Logo" class="logo-img"> -->
-                    </div>
-                    <div class="logo-text">ScalerVerse Ltd</div>
+    <footer>
+        <div class="container footer-content">
+            <div class="footer-top">
+                <div class="footer-brand">
+                    <h3>ScalerVerse.</h3>
+                    <p>Innovating the future, one line of code at a time.</p>
                 </div>
-
-                <div class="footer-links">
+                <div class="footer-nav">
                     <a href="#home">Home</a>
-                    <a href="#about">About Us</a>
-                    <a href="#projects">Projects</a>
-                    <a href="#contact">Contact Us</a>
-                    <a href="#">Privacy Policy</a>
-                    <a href="#">Terms of Service</a>
+                    <a href="#projects">Work</a>
+                    <a href="#about">About</a>
+                    <a href="#contact">Contact</a>
                 </div>
-
-                <p class="copyright">&copy; 2023 ScalerVerse Ltd. All rights reserved. Innovate the future.</p>
             </div>
-        </footer>
-    </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 ScalerVerse Ltd. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
 
     <script src="main.js"></script>
-
 </body>
-
 </html>
