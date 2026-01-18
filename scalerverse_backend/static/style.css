@@ -932,3 +932,82 @@ footer {
     .hamburger.active .bar:nth-child(2) { opacity: 0; }
     .hamburger.active .bar:nth-child(3) { transform: rotate(-45deg) translate(5px, -6px); }
 }
+
+/* ====================
+   Blog Page Design Fix
+   ==================== */
+
+.blog-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    margin-top: 30px;
+}
+
+.blog-card {
+    background: rgba(255, 255, 255, 0.03); /* হালকা গ্লাস এফেক্ট */
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    border-radius: 15px;
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.blog-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 30px rgba(0, 210, 255, 0.15);
+}
+
+.blog-img {
+    width: 100%;
+    height: 220px; /* ছবির হাইট ফিক্সড করে দিলাম */
+    overflow: hidden;
+}
+
+.blog-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* ছবি চ্যাপ্টা হবে না */
+    transition: transform 0.5s ease;
+}
+
+.blog-card:hover .blog-img img {
+    transform: scale(1.1); /* হোভার করলে জুম হবে */
+}
+
+.blog-content {
+    padding: 25px;
+}
+
+.blog-date {
+    display: block;
+    font-size: 0.9rem;
+    color: #00d2ff;
+    margin-bottom: 10px;
+}
+
+.blog-content h3 {
+    font-size: 1.4rem;
+    margin-bottom: 12px;
+    line-height: 1.4;
+    color: #fff;
+}
+
+.blog-content p {
+    font-size: 0.95rem;
+    color: #b0b3b8;
+    margin-bottom: 20px;
+    line-height: 1.6;
+}
+
+.read-more {
+    color: #fff;
+    font-weight: 600;
+    text-decoration: none;
+    border-bottom: 2px solid #00d2ff;
+    padding-bottom: 2px;
+    transition: color 0.3s ease;
+}
+
+.read-more:hover {
+    color: #00d2ff;
+}

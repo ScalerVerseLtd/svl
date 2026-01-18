@@ -35,7 +35,7 @@
                 
                 <li><a href="{% url 'blog' %}" class="nav-link">Blog</a></li>
                 
-                <li><a href="{% url 'home' %}#projects" class="nav-link">Projects</a></li>
+                <li><a href="{% url 'all_projects' %}" class="nav-link">Projects</a></li>
                 <li><a href="{% url 'home' %}#contact" class="btn-primary">Contact Us</a></li>
             </ul>
 
@@ -126,28 +126,41 @@
         </div>
     </section>
 
-    <section id="projects" class="projects-section">
-        <div class="container">
-            <div class="section-header center">
-                <h2>Featured Projects</h2>
-                <p>Something amazing is being built in our labs.</p>
-            </div>
-            <div class="empty-projects-state reveal">
-                <div class="state-icon"><i class="fas fa-rocket"></i></div>
-                <h3>Our Portfolio is Loading...</h3>
-                <p>We are currently heads-down building high-impact solutions for our first batch of clients. <br>Great things take time to engineer.</p>
-                <div class="tech-stack-label">Powered by Modern Tech</div>
-                <div class="tech-stack-preview">
-                    <span title="Flutter"><i class="fab fa-android"></i></span>
-                    <span title="React"><i class="fab fa-react"></i></span>
-                    <span title="Python"><i class="fab fa-python"></i></span>
-                    <span title="Django"><i class="fas fa-server"></i></span>
-                    <span title="UI/UX (Figma)"><i class="fab fa-figma"></i></span>
+    <section id="projects" class="section">
+    <div class="container">
+        <h2 class="section-title" style="text-align: center; margin-bottom: 40px; font-size: 2.5rem; color: #fff;">
+    Featured Projects
+</h2>
+        
+        <div class="project-grid">
+            {% for project in featured_projects %}
+            <div class="project-box reveal">
+                <div class="project-img">
+                    <img src="{{ project.image.url }}" alt="{{ project.title }}">
                 </div>
-                <a href="#contact" class="btn-primary mt-4">Be Our Next Success Story</a>
+                <div class="project-info">
+                    <h3>{{ project.title }}</h3>
+                    <p>{{ project.category|title }}</p>
+                    <a href="{{ project.live_link }}" target="_blank" class="btn-link">Live Demo →</a>
+                </div>
             </div>
+            {% empty %}
+            <div class="project-box reveal" style="grid-column: 1 / -1; text-align: center; padding: 60px 20px; background: rgba(255, 255, 255, 0.03); border: 1px solid rgba(255, 255, 255, 0.05); border-radius: 20px; backdrop-filter: blur(10px); box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);">
+                <div style="font-size: 50px; margin-bottom: 20px; animation: float 3s ease-in-out infinite;">🚀</div>
+                <h3 style="color: #fff; font-size: 1.8rem; margin-bottom: 15px;">Building Something Great</h3>
+                <p style="color: #b0b3b8; font-size: 1.1rem; max-width: 600px; margin: 0 auto; line-height: 1.6;">
+                    Our team is currently working on high-impact projects. <br>
+                    The portfolio section will be updated very soon.
+                </p>
+            </div>
+            {% endfor %}
         </div>
-    </section>
+
+        <div style="text-align: center; margin-top: 30px;">
+            <a href="{% url 'all_projects' %}" class="btn">View All Projects</a>
+        </div>
+    </div>
+</section>
 
     <section id="contact" class="contact-section">
         <div class="container">

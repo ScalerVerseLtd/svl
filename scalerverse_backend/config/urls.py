@@ -2,17 +2,15 @@ from django.contrib import admin
 from django.urls import path
 from django.conf import settings
 from django.conf.urls.static import static
-from blog import views
+from blog.views import home, blog_detail, all_projects, team, all_blogs
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    
-    # নতুন লিংকগুলো এখানে:
-    path('', views.home, name='home'),      # হোমপেজ (খালি লিংক)
-    path('team/', views.team, name='team'), # টিম পেজ
-    
-    path('blog/', views.blog_list, name='blog'),
-    path('blog/<int:pk>/', views.blog_detail, name='blog_detail'),
+    path('', home, name='home'),
+    path('blog/<int:post_id>/', blog_detail, name='blog_detail'),
+    path('projects/', all_projects, name='all_projects'),
+    path('team/', team, name='team'),
+    path('blog/', all_blogs, name='blog'),
 ]
 
 if settings.DEBUG:
